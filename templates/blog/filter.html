@@ -1,0 +1,400 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Required meta tags -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
+
+
+<link rel="shortcut icon" href="{% static 'college/img/fav.png' %}">
+
+<meta name="author" content="codepixer">
+
+<meta name="description" content="">
+
+<meta name="keywords" content="">
+
+<meta charset="UTF-8">
+
+<title>Educature Education</title>
+
+<link rel="stylesheet" href=" {% static 'college/css/bootstrap.css' %}">
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500i" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css">
+<link rel="stylesheet" href=" {% static 'college/css/linearicons.css' %}">
+<link rel="stylesheet" href=" {% static 'college/css/font-awesome.min.css' %}">
+
+<link rel="stylesheet" href="{% static 'college/css/magnific-popup.css' %}">
+<link rel="stylesheet" href="{% static 'college/css/nice-select.css' %}">
+<link rel="stylesheet" href="{% static 'college/css/animate.min.css' %}">
+<link rel="stylesheet" href="{% static 'college/css/owl.carousel.css' %}">
+<link rel="stylesheet" href="{% static 'college/css/main.css' %}">
+<style type="text/css">
+    .dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  border-box: box-sizing;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+
+</head>
+<body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+        <div class="container">
+          <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">Select Your पाठशाला</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
+              <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
+            </div>
+            
+            <div class="navbar-nav">
+              {% if user.is_authenticated %}
+              <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+              <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+                   {% else %}
+                    <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+                    <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+                  {% endif %}  
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </header>
+
+
+          <header id="header">
+<div class="container">
+<div class="row align-items-center justify-content-between d-flex">
+<div id="logo">
+<a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+</div>
+<!--<nav id="nav-menu-container">
+<ul class="nav-menu">
+<li class="menu-active"><a href="index.html">MBA</a></li>
+<li><a href="about.html">Engineering</a></li>
+<li><a href="courses.html">Design</a></li>
+<!--<li class="menu-has-children"><a href="">Law</a>
+<ul>
+<li><a href="elements.html">Elements</a></li>
+</ul>
+</li>
+<li><a href="courses.html">Law</a></li>
+<li><a href="courses.html">Explore More</a></li>
+<li><a href="contact.html"><i class="fa fa-sign-in"> Login</i></a></li>
+
+<li><a href="contact.html"><i class="fa fa-user-plus"> SignUp</i></a></li>
+</ul>
+</nav>-->
+</div>
+</div>
+</header>
+<br><br><br>
+
+<div id="progress"></div>
+
+<div class="center">
+  <div id="register">
+
+    <i id="progressButton" class="ion-android-arrow-forward next"></i>
+
+    <div id="inputContainer">
+      <label id="inputLabel"></label>
+      <div id="inputProgress"></div>
+    </div>
+
+  </div>
+</div>
+
+<div>
+  <form action="../college/prediction" method="GET">
+        <div class="card">
+                <div class="card-header">
+                        1. Teaching, Learning & Resources (TLR)
+                </div>
+                <div class="card-body">
+                  <blockquote class="blockquote mb-0">
+                   
+                    <form>
+                            <label class="checkbox">
+                              <input type="checkbox" value="1"> 1
+                            </label><br>
+                            <label class="checkbox">
+                              <input type="checkbox" value="2"> 2
+                            </label><br>
+                            <label class="checkbox">
+                              <input type="checkbox" value="3"> 3
+                            </label><br>
+                            <label class="checkbox">
+                                <input type="checkbox" value="4"> 4
+                              </label><br>
+                              <label class="checkbox">
+                                  <input type="checkbox" value="5"> 5
+                                </label>
+                          </form>
+                  </blockquote>
+                </div>
+              </div><br>
+              <div class="card">
+                    <div class="card-header">
+                            2. Research and Professional Practice (RP)
+                    </div>
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0">
+                       
+                        <form>
+                                <label class="checkbox">
+                                  <input type="checkbox" value="1"> 1
+                                </label><br>
+                                <label class="checkbox">
+                                  <input type="checkbox" value="2"> 2
+                                </label><br>
+                                <label class="checkbox">
+                                  <input type="checkbox" value="3"> 3
+                                </label><br>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="4"> 4
+                                  </label><br>
+                                  <label class="checkbox">
+                                      <input type="checkbox" value="5"> 5
+                                    </label><br>
+                              </form>
+                      </blockquote>
+                    </div>
+                  </div><br>
+                  <div class="card">
+                        <div class="card-header">
+                                3. Graduation Outcomes (GO)
+                        </div>
+                        <div class="card-body">
+                          <blockquote class="blockquote mb-0">
+                           
+                            <form>
+                                    <label class="checkbox">
+                                      <input type="checkbox" value="1"> 1
+                                    </label><br>
+                                    <label class="checkbox">
+                                      <input type="checkbox" value="2"> 2
+                                    </label><br>
+                                    <label class="checkbox">
+                                      <input type="checkbox" value="3"> 3
+                                    </label><br>
+                                    <label class="checkbox">
+                                        <input type="checkbox" value="4"> 4
+                                      </label><br>
+                                      <label class="checkbox">
+                                          <input type="checkbox" value="5"> 5
+                                        </label>
+                                  </form>
+                          </blockquote>
+                        </div>
+                      </div><br>
+                      <div class="card">
+                            <div class="card-header">
+                                    4. Outreach and Inclusivity (OI)
+                            </div>
+                            <div class="card-body">
+                              <blockquote class="blockquote mb-0">
+                               
+                                <form>
+                                        <label class="checkbox">
+                                          <input type="checkbox" value="1"> 1
+                                        </label><br>
+                                        <label class="checkbox">
+                                          <input type="checkbox" value="2"> 2
+                                        </label><br>
+                                        <label class="checkbox">
+                                          <input type="checkbox" value="3"> 3
+                                        </label><br>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="4"> 4
+                                          </label><br>
+                                          <label class="checkbox">
+                                              <input type="checkbox" value="5"> 5
+                                            </label>
+                                      </form>
+                              </blockquote>
+                            </div>
+                          </div><br>
+                          <div class="card">
+                                <div class="card-header">
+                                        5. Placements
+                                </div>
+                                <div class="card-body">
+                                  <blockquote class="blockquote mb-0">
+                                   
+                                    <form>
+                                            <label class="checkbox">
+                                              <input type="checkbox" value="1"> 1
+                                            </label><br>
+                                            <label class="checkbox">
+                                              <input type="checkbox" value="2"> 2
+                                            </label><br>
+                                            <label class="checkbox">
+                                              <input type="checkbox" value="3"> 3
+                                            </label><br>
+                                            <label class="checkbox">
+                                                <input type="checkbox" value="4"> 4
+                                              </label><br>
+                                              <label class="checkbox">
+                                                  <input type="checkbox" value="5"> 5
+                                                </label>
+                                          </form>
+                                  </blockquote>
+                                </div>
+                              </div><br>
+                              <div class="card">
+                                    <div class="card-header">
+                                            6. Infrastructure
+                                    </div>
+                                    <div class="card-body">
+                                      <blockquote class="blockquote mb-0">
+                                       
+                                        <form>
+                                                <label class="checkbox">
+                                                  <input type="checkbox" value="1"> 1
+                                                </label><br>
+                                                <label class="checkbox">
+                                                  <input type="checkbox" value="2"> 2
+                                                </label><br>
+                                                <label class="checkbox">
+                                                  <input type="checkbox" value="3"> 3
+                                                </label><br>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" value="4"> 4
+                                                  </label><br>
+                                                  <label class="checkbox">
+                                                      <input type="checkbox" value="5"> 5
+                                                    </label>
+                                              </form>
+                                      </blockquote>
+                                    </div>
+                                  </div><br>
+    
+                                  <a href="http://localhost:8000/college/prediction/" class="btn btn-info" role="button">Submit</a><form action="../../firstfilter" method="GET">
+                                    <br>
+</div>
+<br><br><br>
+<div id="back-top">
+<a title="Go to Top" href="#"></a>
+</div>
+
+<script src="{% static 'college/js/vendor/jquery-2.2.4.min.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="{% static 'college/js/vendor/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+<script src="{% static 'college/js/easing.min.js' %}"></script>
+<script src="{% static 'college/js/hoverIntent.js' %}"></script>
+<script src="{% static 'college/js/superfish.min.js' %}"></script>
+<script src="{% static 'college/js/jquery.ajaxchimp.min.js' %}"></script>
+<script src="{% static 'college/js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'college/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'college/js/owl-carousel-thumb.min.js' %}"></script>
+<script src="{% static 'college/js/jquery.sticky.js' %}"></script>
+<script src="{% static 'college/js/jquery.nice-select.min.js' %}"></script>
+<script src="{% static 'college/js/parallax.min.js' %}"></script>
+<script src="{% static 'college/js/waypoints.min.js' %}"></script>
+<script src="{% static 'college/js/wow.min.js' %}"></script>
+<script src="{% static 'college/js/jquery.counterup.min.js' %}"></script>
+<script src="{% static 'college/js/mail-script.js' %}"></script>
+<script src="{% static 'college/js/main.js' %}"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("button");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+    
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+    </html>
